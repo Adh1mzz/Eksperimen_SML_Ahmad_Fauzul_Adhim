@@ -1,0 +1,10 @@
+artifact_location: file:///D:/DICODING%20x%20PIJAK/SUBMISSION/MEMBANGUN%20SISTEM%20MACHINE%20LEARNING/Eksperimen_SML_Ahmad_Fauzul_Adhim/preprocessing/mlflow_artifacts/513228651688362952/models/m-2fc99e16b5af40f2af0b0f9fb804029b/artifacts
+creation_timestamp: 1780556717167
+experiment_id: '513228651688362952'
+last_updated_timestamp: 1780556742516
+model_id: m-2fc99e16b5af40f2af0b0f9fb804029b
+model_type: null
+name: best_rf_model
+source_run_id: b93812e32acc411694a6708c8a7f127c
+status: 2
+status_message: null

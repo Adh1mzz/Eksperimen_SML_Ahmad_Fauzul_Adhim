@@ -1,0 +1,48 @@
+name: Preprocessing Pipeline
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'heart_raw.csv'
+      - 'preprocessing/**'
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  preprocessing:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy scikit-learn
+
+      - name: Run preprocessing
+        run: |
+          cd preprocessing
+          python automate_Ahmad-Fauzul-Adhim.py
+
+      - name: Upload preprocessed dataset
+        uses: actions/upload-artifact@v4
+        with:
+          name: preprocessed-dataset
+          path: preprocessing/heart_preprocessing.csv
+
+      - name: Commit preprocessed data
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add preprocessing/heart_preprocessing.csv
+          git diff --cached --quiet || git commit -m "Auto: Update preprocessed dataset"
+          git push
