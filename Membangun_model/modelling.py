@@ -22,7 +22,7 @@ def main():
     # Set tracking URI menggunakan folder mlruns lokal
     tracking_uri = "file:" + os.path.join(os.getcwd(), "mlruns")
     mlflow.set_tracking_uri(tracking_uri)
-    mlflow.set_experiment("Eksperimen_SML_Ahmad_Fauzul_Adhim")
+    mlflow.set_experiment("Latihan Model Heart Failure")
 
     # ==========================================
     # 2. DATA LOADING & SPLITTING
@@ -122,8 +122,8 @@ def main():
         print(f"  F1-Score  : {f1:.4f}")
         print("="*45)
 
-    print("\n✅ Training Selesai!")
-    print("👉 Cek MLflow UI dengan menjalankan 'mlflow ui' di terminal")
+    print("\nTraining Selesai!")
+    print("Cek MLflow UI dengan menjalankan 'mlflow ui' di terminal")
 
 if __name__ == "__main__":
     main()
