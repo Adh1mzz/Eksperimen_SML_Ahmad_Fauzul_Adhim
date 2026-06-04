@@ -1,0 +1,14 @@
+artifact_uri: file:///d:/DICODING x PIJAK/SUBMISSION/MEMBANGUN SISTEM MACHINE LEARNING/Eksperimen_SML_Ahmad_Fauzul_Adhim/mlruns/727120140230999871/c0a5a777a13d4832949dc93ae1deff43/artifacts
+end_time: 1780564547721
+entry_point_name: ''
+experiment_id: '727120140230999871'
+lifecycle_stage: active
+run_id: c0a5a777a13d4832949dc93ae1deff43
+run_name: RandomForest_Autolog
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780564523685
+status: 3
+tags: []
+user_id: Adhim

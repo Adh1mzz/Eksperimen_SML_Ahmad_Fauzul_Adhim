@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/511101380112607752/b05ea22ef7804b81b066b51e58bc7216/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '511101380112607752'
+lifecycle_stage: active
+run_id: b05ea22ef7804b81b066b51e58bc7216
+run_name: RandomForest_Autolog
+run_uuid: b05ea22ef7804b81b066b51e58bc7216
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780567914861
+status: 1
+tags: []
+user_id: Adhim

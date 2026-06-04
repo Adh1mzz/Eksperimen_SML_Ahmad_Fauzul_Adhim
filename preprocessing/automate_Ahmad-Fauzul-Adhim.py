@@ -207,11 +207,23 @@ def preprocess_pipeline(filepath, output_path=None):
 # ============================
 if __name__ == "__main__":
     # Tentukan path
-    raw_data_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'heart.csv')
-    output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'heart_preprocessing.csv')
+    project_root = os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))
+)
+
+raw_data_path = os.path.join(
+    project_root,
+    "heart.csv"
+)
+
+print("Current file :", __file__)
+print("Dataset path :", raw_data_path)
+print("File exists  :", os.path.exists(raw_data_path))
+    
+output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'heart_preprocessing.csv')
     
     # Jalankan pipeline
-    df_processed, X_train, X_test, y_train, y_test = preprocess_pipeline(
-        filepath=raw_data_path,
-        output_path=output_path
+df_processed, X_train, X_test, y_train, y_test = preprocess_pipeline(
+filepath=raw_data_path,
+output_path=output_path
     )

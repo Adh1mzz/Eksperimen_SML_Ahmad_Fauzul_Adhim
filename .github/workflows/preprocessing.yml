@@ -2,13 +2,11 @@ name: Preprocessing Pipeline
 
 on:
   push:
-    branches: [ main ]
-    paths:
-      - 'heart.csv'
-      - 'preprocessing/**'
-  pull_request:
-    branches: [ main ]
-  workflow_dispatch:  # Manual trigger
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   preprocessing:
@@ -21,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11.9'
+          python-version: "3.11.9"
 
       - name: Install dependencies
         run: |
@@ -46,3 +44,9 @@ jobs:
           git add preprocessing/heart_preprocessing.csv
           git diff --cached --quiet || git commit -m "Auto: Update preprocessed dataset"
           git push
+
+      - name: Show Repository Structure
+        run: |
+          pwd
+          ls -la
+          find . -type f

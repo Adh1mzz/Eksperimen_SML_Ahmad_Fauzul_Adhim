@@ -18,16 +18,20 @@ import json
 import os
 import warnings
 warnings.filterwarnings('ignore')
-
+import dagshub
 
 
 # --- KONFIGURASI DagsHub (Advanced) ---
-DAGSHUB_USER = 'Adh1mzz'
-DAGSHUB_REPO = 'Eksperimen_SML_Ahmad_Fauzul_Adhim'
+DAGSHUB_USER = "Adh1mzz"
+DAGSHUB_REPO = "Eksperimen_SML_Ahmad_Fauzul_Adhim"
 
-# import dagshub
-# dagshub.init(repo_owner='Adh1mzz', repo_name='Eksperimen_SML_Ahmad_Fauzul_Adhim', mlflow=True)
-# mlflow.set_tracking_uri("https://dagshub.com/Adh1mzz/Eksperimen_SML_Ahmad_Fauzul_Adhim.mlflow")
+# Inisialisasi Dagshub untuk MLflow tracking
+import dagshub
+dagshub.init(repo_owner='Adh1mzz', repo_name='Eksperimen_SML_Ahmad_Fauzul_Adhim', mlflow=True)
+mlflow.set_tracking_uri("https://dagshub.com/Adh1mzz/Eksperimen_SML_Ahmad_Fauzul_Adhim.mlflow")
+
+# mlflow.set_tracking_uri("http://127.0.0.1:5000")
+mlflow.set_experiment("Heart-Failure-Prediction")
 
 
 def load_data():
@@ -185,7 +189,7 @@ def train_and_log_model(model, model_name, params, X_train, X_test, y_train, y_t
 
 def main():
     # Setup MLflow
-    mlflow.set_tracking_uri("mlruns")  # Ganti dengan DagsHub URI untuk Advanced
+    mlflow.set_tracking_uri("https://dagshub.com/Adh1mzz/Eksperimen_SML_Ahmad_Fauzul_Adhim.mlflow")  
     mlflow.set_experiment("Heart-Failure-Tuning")
     
     # Load data

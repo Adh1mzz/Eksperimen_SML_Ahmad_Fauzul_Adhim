@@ -24,7 +24,8 @@ def main():
     )
 
     # 3. Setup MLflow
-    mlflow.set_tracking_uri("mlruns")  # Simpan lokal
+    # Menggunakan local server MLflow (Pastikan Anda sudah menjalankan 'mlflow ui' di terminal)
+    mlflow.set_tracking_uri("http://127.0.0.1:5000")
     mlflow.set_experiment("Heart-Failure-Prediction")
 
     # 4. Training dengan Autolog
