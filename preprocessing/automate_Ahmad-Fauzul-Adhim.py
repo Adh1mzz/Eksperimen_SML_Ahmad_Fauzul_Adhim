@@ -207,7 +207,7 @@ def preprocess_pipeline(filepath, output_path=None):
 # ============================
 if __name__ == "__main__":
     # Tentukan path
-    raw_data_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'heart_raw.csv')
+    raw_data_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'heart.csv')
     output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'heart_preprocessing.csv')
     
     # Jalankan pipeline
