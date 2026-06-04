@@ -1,6 +1,7 @@
 artifact_location: mlflow-artifacts:/511101380112607752
 creation_time: 1780567911797
 experiment_id: '511101380112607752'
-last_update_time: 1780567911797
-lifecycle_stage: active
+last_update_time: 1780569664675
+lifecycle_stage: deleted
 name: Heart-Failure-Prediction
+tags: {}
