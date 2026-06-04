@@ -26,7 +26,7 @@ DAGSHUB_REPO = "Eksperimen_SML_Ahmad_Fauzul_Adhim"
 dagshub.init(repo_owner='Adh1mzz', repo_name='Eksperimen_SML_Ahmad_Fauzul_Adhim', mlflow=True)
 mlflow.set_tracking_uri("https://dagshub.com/Adh1mzz/Eksperimen_SML_Ahmad_Fauzul_Adhim.mlflow")
 
-mlflow.set_experiment("Heart Disease Tuning")
+mlflow.set_experiment("Heart-Disease-Tuning")
 
 # ==========================================
 # DATA LOADING & SPLITTING

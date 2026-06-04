@@ -20,9 +20,9 @@ def main():
     # 1. SETUP MLFLOW
     # ==========================================
     # Set tracking URI menggunakan folder mlruns lokal
-    tracking_uri = "file:" + os.path.join(os.getcwd(), "mlruns")
+    tracking_uri = "file:" + os.path.join(os.path.dirname(__file__), "mlruns")
     mlflow.set_tracking_uri(tracking_uri)
-    mlflow.set_experiment("Latihan Model Heart Failure")
+    mlflow.set_experiment("Heart-failure-modelling")
 
     # ==========================================
     # 2. DATA LOADING & SPLITTING
