@@ -1,0 +1,10 @@
+artifact_location: file:d:\DICODING x PIJAK\SUBMISSION\MEMBANGUN SISTEM MACHINE LEARNING\Eksperimen_SML_Ahmad_Fauzul_Adhim\mlruns/508695600269177952/models/m-17178ece8b9e44ba9fbbf1043cd7403e/artifacts
+creation_timestamp: 1780570582323
+experiment_id: '508695600269177952'
+last_updated_timestamp: 1780570603772
+model_id: m-17178ece8b9e44ba9fbbf1043cd7403e
+model_type: null
+name: model
+source_run_id: c3c108c7019644b6b564672cde388abb
+status: 2
+status_message: null
