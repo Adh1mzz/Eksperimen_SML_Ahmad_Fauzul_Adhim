@@ -28,7 +28,7 @@ jobs:
           pip install mlflow scikit-learn pandas numpy matplotlib seaborn
 
       - name: Run MLflow Project
-        working-directory: Workflow-CI/MLProject
+        working-directory: ./Workflow-CI/MLProject
         run: |
           python modelling.py
 
