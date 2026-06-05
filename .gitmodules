@@ -1,0 +1,3 @@
+[submodule "Workflow-CI"]
+	path = Workflow-CI
+	url = https://github.com/Adh1mzz/Workflow-CI.git
