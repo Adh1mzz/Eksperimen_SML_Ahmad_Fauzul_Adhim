@@ -66,6 +66,6 @@ jobs:
             docker push adh1mzz/heart-failure-model:latest
             echo "✓ Docker image berhasil di-push!"
           else
-            echo "⚠ Model tidak ditemukan, pastikan proses training berhasil."
+            echo "Model tidak ditemukan, pastikan proses training berhasil."
             exit 1
           fi
