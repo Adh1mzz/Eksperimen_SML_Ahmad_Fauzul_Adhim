@@ -2,11 +2,11 @@ name: ML Training CI Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
     paths:
-      - 'Workflow-CI/**'
+      - "Workflow-CI/**"
   pull_request:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
@@ -43,11 +43,11 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          
+
           # Copy artifacts
           mkdir -p saved_artifacts
           cp -r Workflow-CI/mlruns/ saved_artifacts/ 2>/dev/null || true
-          
+
           git add saved_artifacts/ || true
           git diff --cached --quiet || git commit -m "CI: Update model artifacts"
           git push || true
@@ -59,7 +59,7 @@ jobs:
     needs: train-model
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -67,7 +67,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install MLflow
         run: pip install mlflow scikit-learn pandas numpy
