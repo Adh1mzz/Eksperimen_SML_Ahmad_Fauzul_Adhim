@@ -2,7 +2,7 @@ name: Preprocessing Pipeline
 
 on:
   push:
-    branches: [main]
+    branches: [ master ]
   workflow_dispatch:
 
 permissions:
@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas numpy scikit-learn
+          pip install pandas numpy scikit-learn matplotlib seaborn
 
       - name: Run preprocessing
         run: |
@@ -35,14 +35,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: preprocessed-dataset
-          path: preprocessing/heart_preprocessing.csv
+          path: preprocessing/heartfailure_preprocessing.csv
 
       - name: Commit preprocessed data
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add preprocessing/heart_preprocessing.csv
-          git diff --cached --quiet || git commit -m "Auto: Update preprocessed dataset"
+          git add preprocessing/heartfailure_preprocessing.csv
+          git diff --cached --quiet || git commit -m "Auto: Update Heart Failure preprocessed dataset from preprocessing pipeline"
           git push
 
       - name: Show Repository Structure
